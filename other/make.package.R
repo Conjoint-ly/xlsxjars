@@ -1,6 +1,6 @@
 # Automate the making of the package
 # Steps:
-# 1) Download the poi-bin-3.6-20091214.zip (or newer) and extract
+# 1) Download the binary distribution poi-bin-3.6-20091214.zip (or newer) and extract
 # 2) Copy the jars from the poi-3.6/ folder into java/inst
 # 3) Copy the jars from the poi-3.6/ooxml-lib/ into java/inst
 # 4) 
@@ -12,12 +12,15 @@
   if (computer=="WORK"){
     pkgdir  <<- "H:/user/R/Adrian/findataweb/temp/xlsxjars/trunk/"
     outdir  <<- "H:/"
-    Rcmd    <<- "S:/All/Risk/Software/R/R-2.10.1/bin/Rcmd"
+    Rcmd    <<- "S:/All/Risk/Software/R/R-2.12.1/bin/i386/Rcmd"
   } else if (computer == "LAPTOP"){
     pkgdir  <<- "C:/Users/adrian/R/findataweb/temp/xlsxjars/trunk/"
     outdir  <<- "C:/"
-    Rcmd    <<- '"C:/Program Files/R/R-2.11.0/bin/Rcmd"'
-  } else if (computer == "HOME"){
+    Rcmd    <<- '"C:/Program Files/R/R-2.12.1/bin/i386/Rcmd"'
+  } else if (computer == "WORK2"){
+    pkgdir  <<- "H:/user/R/Adrian/findataweb/temp/xlsx/trunk/"
+    outdir  <<- "H:/"
+    Rcmd    <<- '"C:/Program Files/R/R-2.12.2/bin/i386/Rcmd"'
   } else {
   }
 
@@ -54,7 +57,7 @@
 ##################################################################
 
 version <- NULL        # keep increasing the minor
-version <- "0.2.0"     # if you want to set it by hand
+version <- "0.3.0"     # if you want to set it by hand
 
 .setEnv("WORK")   # "LAPTOP", "WORK"
 

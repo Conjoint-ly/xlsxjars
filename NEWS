@@ -1,0 +1,16 @@
+NEWS for package xlsxjars
+
+
+Changes in version 0.3.0 (released 2011-03-03)
+
+ o Use the POI 3.7 jars.
+
+ o Do not error in .onLoad if Java version is 1.5.0. 
+ 
+
+Changes in version 0.2.0 (released 2010-05-01)
+
+ o Use the POI 3.6 jars.
+
+ 
+
