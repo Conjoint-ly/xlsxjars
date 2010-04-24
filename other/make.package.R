@@ -1,19 +1,22 @@
 # Automate the making of the package
-#
-#
+# Steps:
+# 1) Download the poi-bin-3.6-20091214.zip (or newer) and extract
+# 2) Copy the jars from the poi-3.6/ folder into java/inst
+# 3) Copy the jars from the poi-3.6/ooxml-lib/ into java/inst
+# 4) 
 
 ##################################################################
 #
 .setEnv <- function(computer=c("HOME", "LAPTOP", "WORK"))
 {
   if (computer=="WORK"){
-    pkgdir  <<- "H:/user/R/Adrian/findataweb/temp/xlsx/"
+    pkgdir  <<- "H:/user/R/Adrian/findataweb/temp/xlsxjars/trunk/"
     outdir  <<- "H:/"
     Rcmd    <<- "S:/All/Risk/Software/R/R-2.10.1/bin/Rcmd"
   } else if (computer == "LAPTOP"){
-    pkgdir  <<- "C:/Users/adrian/R/findataweb/temp/xlsxjars/"
+    pkgdir  <<- "C:/Users/adrian/R/findataweb/temp/xlsxjars/trunk/"
     outdir  <<- "C:/"
-    Rcmd    <<- '"C:/Program Files/R/R-2.10.1/bin/Rcmd"'
+    Rcmd    <<- '"C:/Program Files/R/R-2.11.0/bin/Rcmd"'
   } else if (computer == "HOME"){
   } else {
   }
@@ -51,9 +54,9 @@
 ##################################################################
 
 version <- NULL        # keep increasing the minor
-version <- "0.1.0"     # if you want to set it by hand
+version <- "0.2.0"     # if you want to set it by hand
 
-.setEnv("LAPTOP")   # "LAPTOP", "WORK"
+.setEnv("WORK")   # "LAPTOP", "WORK"
 
 # change the version
 version <- .update.DESCRIPTION(pkgdir, version)
@@ -70,11 +73,9 @@ install.packages(paste(outdir, "xlsxjars_", version,".zip", sep=""),
 
 # make the source for CRAN
 cmd <- paste(Rcmd, "build", pkgdir)
-print(cmd)
-system(cmd)
+print(cmd); system(cmd)
 
 # pass the checks?
 cmd <- paste(Rcmd, "check", pkgdir)
-print(cmd)
-system(cmd)
+print(cmd); system(cmd)
 

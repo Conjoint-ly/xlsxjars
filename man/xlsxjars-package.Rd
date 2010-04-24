@@ -9,7 +9,7 @@
   
   The \code{xlsxjars} package collects all the external jars required
   for the \code{xlxs} package.  These external jars are quite large in
-  size (15MB) and have a slow release cycle.  By separating the Java and
+  size (10MB) and have a slow release cycle.  By separating the Java and
   R development, the storage footprint on CRAN is reduced.
 
   The Java library comes from the Apache project,
@@ -19,15 +19,15 @@
   Java, we can piggy back on the excellent work already done by the
   folks at the Apache project and provide this functionality in R.
  
-  Current version corresponds to release 1.35 of the POI project. 
+  Current version corresponds to release 1.36 of the POI project. 
   
 }
 \details{
 \tabular{ll}{
 Package: \tab xlsxjars\cr
 Type: \tab Package\cr
-Version: \tab 0.1.0\cr
-Date: \tab 2010-01-01\cr
+Version: \tab 0.2.0\cr
+Date: \tab 2010-04-24\cr
 License: \tab GPL-3\cr
 }
 
