@@ -1,0 +1,13 @@
+be44c6510752cc2132228af6ac85d8c4 *DESCRIPTION
+be48cdef6f28fba335eab49c54f8e6ea *NAMESPACE
+02e395e18db37520b1f531054d854b90 *NEWS
+0107a55f8e4c4b8c34e3a4f58883662e *R/utilities.R
+5970f54883b4831b24b97f1125ba27e6 *inst/java/commons-codec-1.6.jar
+4d8f51d3fe3900efc6e395be48030d6d *inst/java/dom4j-1.6.1.jar
+5c915f48922046c71121fd7021aa23cb *inst/java/poi-3.8-20120326.jar
+8f147b248f078799c24c8714f185b1a8 *inst/java/poi-ooxml-3.8-20120326.jar
+7ebcffdc4d82b2b8cbc6464d4543cd07 *inst/java/poi-ooxml-schemas-3.8-20120326.jar
+7d436a53c64490bee564c576babb36b4 *inst/java/stax-api-1.0.1.jar
+64b05e7adad68fa65d02a8b6daa64afb *inst/java/xmlbeans-2.3.0.jar
+aa8c2f7e814c42692ad0bf0e8b32b258 *man/xlsxjars-package.Rd
+a20a73e214267665ed6f1989a26a3bcc *other/make.package.R

@@ -9,18 +9,19 @@
 #
 .setEnv <- function(computer=c("HOME", "LAPTOP", "WORK"))
 {
-  if (computer=="WORK"){
+  if (computer=="WORK") {
     pkgdir  <<- "H:/user/R/Adrian/findataweb/temp/xlsxjars/trunk/"
     outdir  <<- "H:/"
     Rcmd    <<- "S:/All/Risk/Software/R/R-2.12.1/bin/i386/Rcmd"
-  } else if (computer == "LAPTOP"){
+  } else if (computer == "LAPTOP") {
     pkgdir  <<- "C:/Users/adrian/R/findataweb/temp/xlsxjars/trunk/"
     outdir  <<- "C:/"
     Rcmd    <<- '"C:/Program Files/R/R-2.12.1/bin/i386/Rcmd"'
-  } else if (computer == "WORK2"){
-    pkgdir  <<- "H:/user/R/Adrian/findataweb/temp/xlsx/trunk/"
-    outdir  <<- "H:/"
-    Rcmd    <<- '"C:/Program Files/R/R-2.12.2/bin/i386/Rcmd"'
+  } else if (computer == "HOME") {
+    pkgdir    <<- "/home/adrian/Documents/findataweb/temp/xlsxjars/trunk/"
+    outdir    <<- "/tmp/"
+    Rcmd      <<- "R CMD"
+    javadir   <<- "/home/adrian/workspace/xlsx/"
   } else {
   }
 
@@ -57,21 +58,21 @@
 ##################################################################
 
 version <- NULL        # keep increasing the minor
-version <- "0.3.0"     # if you want to set it by hand
+version <- "0.4.0"     # if you want to set it by hand
 
-.setEnv("WORK")   # "LAPTOP", "WORK"
+.setEnv("HOME")   # "LAPTOP", "WORK"
 
 # change the version
 version <- .update.DESCRIPTION(pkgdir, version)
 
 # make the package
 setwd(outdir)
-cmd <- paste(Rcmd, "build --force --binary --no-vignette", pkgdir)
+cmd <- paste(Rcmd, "build --force", pkgdir)
 print(cmd)
 system(cmd)
 
-install.packages(paste(outdir, "xlsxjars_", version,".zip", sep=""),
-                 repos=NULL)
+package.gz <- paste(outdir, "xlsxjars_", version,".tar.gz", sep="")
+install.packages(package.gz, repos=NULL, type="source")
 
 
 # make the source for CRAN
@@ -80,5 +81,9 @@ print(cmd); system(cmd)
 
 # pass the checks?
 cmd <- paste(Rcmd, "check", pkgdir)
+print(cmd); system(cmd)
+
+# check as CRAN
+cmd <- paste(Rcmd, "check --as-cran", package.gz)
 print(cmd); system(cmd)
 
