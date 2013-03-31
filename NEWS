@@ -1,5 +1,10 @@
 NEWS for package xlsxjars
 
+
+Changes in version 0.5.0 (released 2013-03-31)
+
+ o Use the POI 3.9 jars.
+
 Changes in version 0.4.0 (released 2012-04-15)
 
  o Use the POI 3.8 jars.

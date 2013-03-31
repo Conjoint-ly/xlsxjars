@@ -57,17 +57,16 @@
 ##################################################################
 ##################################################################
 
-version <- NULL        # keep increasing the minor
-version <- "0.4.0"     # if you want to set it by hand
+version <- "0.5.0"     # if you want to set it by hand
 
 .setEnv("HOME")   # "LAPTOP", "WORK"
 
 # change the version
-version <- .update.DESCRIPTION(pkgdir, version)
+# version <- .update.DESCRIPTION(pkgdir, version)
 
 # make the package
 setwd(outdir)
-cmd <- paste(Rcmd, "build --force", pkgdir)
+cmd <- paste(Rcmd, "build --force --md5", pkgdir)
 print(cmd)
 system(cmd)
 
@@ -79,9 +78,6 @@ install.packages(package.gz, repos=NULL, type="source")
 cmd <- paste(Rcmd, "build", pkgdir)
 print(cmd); system(cmd)
 
-# pass the checks?
-cmd <- paste(Rcmd, "check", pkgdir)
-print(cmd); system(cmd)
 
 # check as CRAN
 cmd <- paste(Rcmd, "check --as-cran", package.gz)

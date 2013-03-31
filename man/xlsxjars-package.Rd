@@ -26,8 +26,8 @@
 \tabular{ll}{
 Package: \tab xlsxjars\cr
 Type: \tab Package\cr
-Version: \tab 0.4.0\cr
-Date: \tab 2012-04-15\cr
+Version: \tab 0.5.0\cr
+Date: \tab 2013-03-31\cr
 License: \tab GPL-3\cr
 }
 
