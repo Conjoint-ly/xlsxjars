@@ -19,15 +19,15 @@
   Java, we can piggy back on the excellent work already done by the
   folks at the Apache project and provide this functionality in R.
  
-  Current version corresponds to release 3.8 of the POI project. 
+  Current version corresponds to release 3.10 of the POI project. 
   
 }
 \details{
 \tabular{ll}{
 Package: \tab xlsxjars\cr
 Type: \tab Package\cr
-Version: \tab 0.5.0\cr
-Date: \tab 2013-03-31\cr
+Version: \tab 0.6.0\cr
+Date: \tab 2014-02-26\cr
 License: \tab GPL-3\cr
 }
 
