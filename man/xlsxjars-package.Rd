@@ -12,22 +12,25 @@
   size (10MB) and have a slow release cycle.  By separating the Java and
   R development, the storage footprint on CRAN is reduced.
 
-  The Java library comes from the Apache project,
-  \url{http://poi.apache.org/index.html}.  This Apache project provides
-  a Java API to Microsoft Documents (Excel, Word, PowerPoint, Outlook,
-  Visio, etc.)  By using the \code{rJava} package that links \R and
-  Java, we can piggy back on the excellent work already done by the
-  folks at the Apache project and provide this functionality in R.
+  The Java library comes from the Apache project, see
+  \url{http://poi.apache.org/index.html} for License and Copyright of
+  this piece of software.  The POI Apache project provides a Java API to
+  Microsoft Documents (Excel, Word, PowerPoint, Outlook, Visio, etc.)
+  By using the \code{rJava} package that links \R and Java, we can use
+  the excellent work already done by the folks at the Apache project and
+  provide this functionality in R.
  
   Current version corresponds to release 3.10 of the POI project. 
+
+  
   
 }
 \details{
 \tabular{ll}{
 Package: \tab xlsxjars\cr
 Type: \tab Package\cr
-Version: \tab 0.6.0\cr
-Date: \tab 2014-02-26\cr
+Version: \tab 0.6.1\cr
+Date: \tab 2014-04-01\cr
 License: \tab GPL-3\cr
 }
 
