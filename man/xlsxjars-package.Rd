@@ -29,7 +29,7 @@
 \tabular{ll}{
 Package: \tab xlsxjars\cr
 Type: \tab Package\cr
-Version: \tab 0.6.1\cr
+Version: \tab 0.6.4.9\cr
 Date: \tab 2014-04-01\cr
 License: \tab GPL-3\cr
 }
