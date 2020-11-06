@@ -1,4 +1,7 @@
 NEWS for package xlsxjars
+Changes in version 0.6.1.1 (released 2014-02-26)
+
+ o Use the POI 3.17 jars.
 
 Changes in version 0.6.1 (released 2014-04-01)
  
